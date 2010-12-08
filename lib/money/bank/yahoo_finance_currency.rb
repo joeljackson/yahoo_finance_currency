@@ -3,7 +3,7 @@ require 'open-uri'
 
 class Money
   module Bank
-    class YahooCurrency < Money::Bank::VariableExchange
+    class YahooFinanceCurrency < Money::Bank::VariableExchange
       # @return [Hash] Stores the currently known rates.
       attr_reader :rates
 
@@ -13,7 +13,7 @@ class Money
       # @return [Hash] The empty @rates Hash.
       #
       # @example
-      #   @bank = YahooCurrency.new  #=> <Money::Bank::YahooCurrency...>
+      #   @bank = YahooFinanceCurrency.new  #=> <Money::Bank::YahooFinanceCurrency...>
       #   @bank.get_rate(:USD, :EUR)  #=> 0.776337241
       #   @bank.flush_rates           #=> {}
       def flush_rates
@@ -33,7 +33,7 @@ class Money
       # @return [Float] The flushed rate.
       #
       # @example
-      #   @bank = YahooCurrency.new #=> <Money::Bank::YahooCurrency...>
+      #   @bank = YahooFinanceCurrency.new #=> <Money::Bank::YahooFinanceCurrency...>
       #   @bank.get_rate(:USD, :EUR) #=> 0.776337241
       #   @bank.flush_rate(:USD, :EUR) #=> 0.776337241
       def flush_rate(from, to)
@@ -53,7 +53,7 @@ class Money
       # @return [Float] The requested rate.
       #
       # @example
-      #   @bank = YahooCurrency.new #=> <Money::Bank::YahooCurrency...>
+      #   @bank = YahooFinanceCurrency.new #=> <Money::Bank::YahooFinanceCurrency...>
       #   @bank.get_rate(:USD, :EUR) #=> 0.776337241
       def get_rate(from, to)
         @mutex.synchronize{
@@ -71,7 +71,7 @@ class Money
       # @return [Float] The requested rate.
       #
       # @example
-      #   @bank = YahooCurrency.new #=> <Money::Bank::YahooCurrency...>
+      #   @bank = YahooFinanceCurrency.new #=> <Money::Bank::YahooFinanceCurrency...>
       #   @bank.get_yahoo_rate(:USD, :EUR) #=> 0.776337241
       def get_yahoo_rate(from, to)
         from, to = Currency.wrap(from), Currency.wrap(to)

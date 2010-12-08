@@ -5,7 +5,7 @@ CLOBBER.include('.yardoc', 'doc')
 
 def gemspec
   @gemspec ||= begin
-    file = File.expand_path("../yahoo_currency.gemspec", __FILE__)
+    file = File.expand_path("../yahoo_finance_currency.gemspec", __FILE__)
     eval(File.read(file), binding, file)
   end
 end
@@ -17,15 +17,6 @@ rescue LoadError
   task(:spec){abort "`gem install rspec` to run specs"}
 end
 task :default => :spec
-
-begin
-  require 'yard'
-  YARD::Rake::YardocTask.new do |t|
-    t.options << "--files" << "CHANGELOG.md,LICENSE"
-  end
-rescue LoadError
-  task(:yard){abort "`gem install yard` to generate documentation"}
-end
 
 begin
   require 'rake/gempackagetask'

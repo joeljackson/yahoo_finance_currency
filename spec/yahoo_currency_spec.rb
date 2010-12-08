@@ -1,11 +1,11 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 require 'money'
-require 'money/bank/yahoo_currency'
+require 'money/bank/yahoo_finance_currency'
 
-describe "YahooCurrency" do
+describe "YahooFinanceCurrency" do
   before :each do
-    @bank = Money::Bank::YahooCurrency.new
+    @bank = Money::Bank::YahooFinanceCurrency.new
   end
 
   describe "#get_yahoo_rate" do

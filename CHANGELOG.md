@@ -1,4 +1,4 @@
-Yahoo Currency 0.1.0
+Yahoo Currency 0.1.1
 =====================
 
 Features
