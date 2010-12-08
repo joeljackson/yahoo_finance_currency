@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Vicent Gozalbes"]
   s.email       = ["vicent@peertransfer.com"]
-  s.homepage    = "https://github.com/peertransfer/yahoo_currency"
+  s.homepage    = "https://github.com/peertransfer/yahoo_finance_currency"
   s.summary     = "Access the Yahoo! Finance exchange rate data."
   s.description = "YahooFinanceCurrency extends Money::Bank::Base and gives you access to the current Yahoo! Finance exchange rates."
   s.rubyforge_project = ""

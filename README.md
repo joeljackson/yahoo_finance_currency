@@ -1,17 +1,17 @@
 Yahoo Currency
 ===============
 
-This gem extends Money::Bank::VariableExchange with Money::Bank::YahooCurrency
+This gem extends Money::Bank::VariableExchange with Money::Bank::YahooFinanceCurrency
 and gives you access to the current Yahoo! Finance exchange rates.
 
 Usage
 -----
 
     require 'money'
-    require 'money/bank/yahoo_currency'
+    require 'money/bank/yahoo_finance_currency'
 
-    # set default bank to instance of YahooCurrency
-    Money.default_bank = Money::Bank::YahooCurrency.new
+    # set default bank to instance of YahooFinanceCurrency
+    Money.default_bank = Money::Bank::YahooFinanceCurrency.new
 
     # create a new money object, and use the standard #exchange_to method
     n = 1.to_money(:USD)
