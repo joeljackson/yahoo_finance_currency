@@ -1,10 +1,9 @@
-Yahoo! Finance Currency 0.1.3
+Yahoo! Finance Currency 0.1.4
 =====================
 
 Features
 --------
- - Change Money version dependency
-
+ - Update `money` requirement to `~> 3.5`
 
 Yahoo! Finance Currency 0.1.2
 =====================
