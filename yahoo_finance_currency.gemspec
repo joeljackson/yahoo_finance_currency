@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "yahoo_finance_currency"
-  s.version     = "0.1.2"
+  s.version     = "0.1.3"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Vicent Gozalbes"]
   s.email       = ["vicent@peertransfer.com"]
@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec", ">= 2.0.0"
 
-  s.add_dependency "money", "~> 3.1.5"
+  s.add_dependency "money", ">= 3.5.4"
 
   s.files        = Dir.glob("lib/**/*") + %w(LICENSE README.md CHANGELOG.md)
   s.require_path = "lib"

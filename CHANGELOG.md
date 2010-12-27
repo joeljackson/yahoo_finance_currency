@@ -1,3 +1,11 @@
+Yahoo! Finance Currency 0.1.3
+=====================
+
+Features
+--------
+ - Change Money version dependency
+
+
 Yahoo! Finance Currency 0.1.2
 =====================
 
